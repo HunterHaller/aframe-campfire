@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+
+    <a-assets>
+      <a-asset-item id="willowSmall" src="assets/pollard-willow/PollardWillowTree.gltf"></a-asset-item>
+      <a-asset-item id="willowLarge" src="assets/weeping-willow/WeepingWillowTree.gltf"></a-asset-item>
+      <a-asset-item id="mountain" src="assets/mountain/Mountain_01.gltf"></a-asset-item>
+      <a-asset-item id="log" src="assets/log/PUSHILIN_log.gltf"></a-asset-item>
+      <a-asset-item id="deadTree" src="assets/dead-tree/PUSHILIN_dead_tree.gltf"></a-asset-item>
+      <a-asset-item id="campfire" src="assets/campfire/PUSHILIN_campfire.gltf"></a-asset-item>
+      <!-- <img id="sky" src="assets/sky3.jpg"> -->
+      <img id="groundTexture" src="assets/ground.jpg">
+    </a-assets>
+
+    <a-entity environment="preset: starry; grid: none; shadow: true; lighting: none; playArea: 0.8" visible=""></a-entity>
+
+    <!-- <a-entity light="type: point; color: blue; castShadow: true; intensity: 4.39" position="4 7 7" visible="false"></a-entity> -->
+
+    <a-gltf-model src="#willowSmall" position="-9.03775 0 -15.14693" shadow="" rotation="0 -26.62 0"></a-gltf-model>
+    <a-gltf-model src="#willowSmall" position="-11.03775 0 -8.14693" shadow="" rotation="0 -80.62 0"></a-gltf-model>
+    <a-gltf-model src="#willowSmall" position="11.46391 0 9.11821" shadow="" rotation="0 -58.75109231271462 0" gltf-model="assets/pollard-willow/PollardWillowTree.gltf"></a-gltf-model>
+    <a-gltf-model src="#willowSmall" position="-12.8388 -0.03757 -3.78981" shadow="" rotation="0 -80.62 0" gltf-model="assets/pollard-willow/PollardWillowTree.gltf"></a-gltf-model>
+
+    <a-gltf-model src="#willowLarge" position="7 -0.07 -15.44912" scale="3 3 3" rotation="0 -60 0" shadow=""></a-gltf-model>
+    <a-gltf-model src="#willowLarge" position="-8.98896 -0.07 8.33242" scale="4.24408 4.83695 3" rotation="0 -47.47413698894975 0" shadow="" gltf-model="assets/weeping-willow/WeepingWillowTree.gltf"></a-gltf-model>
+
+    <a-gltf-model src="#mountain" position="-50.68763 0 -41.67329" shadow="" scale="8 10 6" rotation="0 28 0"></a-gltf-model>
+
+    <a-gltf-model src="#log" position="-3 0.5 -6" shadow="" rotation="0 60 0"></a-gltf-model>
+    <a-gltf-model src="#log" position="0 0.5 0" shadow="" rotation="0 0 0"></a-gltf-model>
+    <a-gltf-model src="#log" position="3.5 0.5 -5.7" shadow="" rotation="0 112 0"></a-gltf-model>
+
+    <a-gltf-model src="#deadTree" position="6.59258 3.55264 -3.88843" shadow="" gltf-model="assets/dead-tree/PUSHILIN_dead_tree.gltf" scale="3 3 3"></a-gltf-model>
+
+    <!-- <a-gltf-model src="#deadTree" position="-1.0488 1.08655 -11.51577" shadow="" rotation="0 75 0"></a-gltf-model> -->
+
+    <a-gltf-model src="#campfire" position="0 0.5 -4" shadow="">
+      <a-sound src="src: url(assets/fire.mp3)" autoplay="true" loop="true" position="0 0.5 -4"></a-sound>
+    </a-gltf-model>
+    <!-- <a-gltf-model src="#campfire" position="0 0.5 -4" shadow="" particle-system=""></a-gltf-model> -->
+    <!-- <a-entity position="0 0.5 -4" particle-system="preset: dust"></a-entity> -->
+
+    <a-entity camera="active: true" position="0 1.6 0" rotation="-26.35605857601789 166.61612682404237 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+
+  </a-scene>
+</body>
+
+</html>
